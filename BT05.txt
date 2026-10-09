@@ -1,0 +1,29 @@
+SESSION05
+Bài 5 : Thiết kế quy trình tự động quản lý tệp bằng Terminal
+
+Tên lớp: HCM K26 CNTT2
+Môn học: Nhập môn công nghệ thông tin
+Họ và tên: LƯƠNG THANH THƯ
+
+1. Sơ đồ luồng IPO
+
+Input (Đầu vào)     	                    Process (Xử lý)	                     Output (Đầu ra)
+Các file thô trong Downloads               Phân loại theo đuôi file	
+File .png, .jpg	                              Đuôi là ảnh	                 Di chuyển vào media/
+File .py	                              Đuôi là .py	                Di chuyển vào scripts/
+File .tmp	                              Đuôi là .tmp	              Xóa file để giải phóng dung lượng
+
+2. Danh sách câu lệnh kịch bản cho Robot (Linux/Bash)
+
+bash
+
+mkdir -p media scripts
+mv *.png *.jpg media/
+mv *.py scripts/
+rm *.tmp
+
+mkdir -p: tạo sẵn thư mục đích, đã có thì không báo lỗi.
+
+mv: di chuyển file vào thư mục tương ứng, có dấu / sau tên thư mục đích để mv hiểu đó là thư mục, tránh lỗi “Is a directory”.
+
+rm: xóa các file tạm .tmp
